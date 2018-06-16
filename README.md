@@ -26,3 +26,6 @@ Nachdem der Webserver gestartet wurde, stehen zwei mögliche URLs zum Aufruf ber
 `http://127.0.0.1:3000/red` verhält sich gleich wie `/raw`, gibt aber nur den Rot-Kanal des Bildes zurück, um die Übertragungszeit zu verkürzen.
 
 Zum Beenden des laufenden Servers reicht ein einfaches `Ctrl-C`.
+
+## Dummy-Server
+Um die Software ohne Kamera testen zu können, ist in diesem Repo eine `dummy_camserver.py`. Ihr kann zusätzlich ein Bild angegeben werden, dass dann über HTTP verbreitet wird, ohne die Raspberry Pi Camera benutzen zu müssen.
