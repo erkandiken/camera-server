@@ -24,7 +24,7 @@ class CamServer_CaptureHandler():
 
 class CamServer_RequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
-        logging.info("Request path", self.path)
+        logging.info("Request path {}".format(self.path))
         if self.path == '/raw':
             self.send_response(200)
 
