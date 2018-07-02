@@ -3,7 +3,7 @@ import tkinter.messagebox as msb
 
 import logging
 from http.server import BaseHTTPRequestHandler, HTTPServer
-from camserver import CamServer_RequestHandler, CamServer_CaptureHandler
+from holmos_camera_server.dummycamserver import CamServer_RequestHandler, CamServer_CaptureHandler
 
 class Application(tk.Frame):
     def __init__(self, master=None):
@@ -48,7 +48,7 @@ class Application(tk.Frame):
             self.master.destroy()
 
         """ Run the server """
-        server_address = (args.address, args.port)
+        server_address = (address, port)
         httpd = HTTPServer(server_address, CamServer_RequestHandler)
         httpd.capture_handler = CamServer_CaptureHandler()
         logging.info("Serving on http://{}:{}".format(server_address[0], server_address[1]))

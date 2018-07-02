@@ -8,9 +8,8 @@ setuptools.setup(
         description="Serves raw bayer frames over HTTP",
         url="https://github.com/holmos-frs/camera-server",
         packages=setuptools.find_packages(),
-        classifiers=(
+        classifiers=[
             "Programming Language :: Python :: 3",
             "Topic :: Education",
-            "Topic :: Scientific/Engineering"
-        ),
+        ],
 )
