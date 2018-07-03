@@ -19,12 +19,12 @@ class CamServer_CaptureHandler():
     def capture(self):
         logging.info('Capturing frame from camera')
         self.cam.capture(self.arr, 'jpeg', bayer=True)
-        return self.arr
+        return self.arr.demosaic()
 
 
 class CamServer_RequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
-        logging.info("Request path", self.path)
+        logging.info("Request path %s" % self.path)
         if self.path == '/raw':
             self.send_response(200)
 
