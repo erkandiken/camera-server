@@ -14,6 +14,7 @@ import matplotlib.pyplot as plt
 class CamServer_CaptureHandler():
     def __init__(self, imagefile):
         self.image = plt.imread(imagefile)
+        print(self.image.shape[2])
         assert self.image.shape[2] == 3 # Assert 3 channels
 
 
